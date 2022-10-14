@@ -8,11 +8,36 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "baseUrl": ".",
-    "rootDir": "."
+    "rootDir": ".",
+    "paths": {
+      "$components": [
+        "src/components/"
+      ],
+      "$components/*": [
+        "src/components/*"
+      ],
+      "$pages": [
+        "src/components/pages"
+      ],
+      "$pages/*": [
+        "src/components/pages/*"
+      ],
+      "$utils": [
+        "src/components/utils"
+      ],
+      "$utils/*": [
+        "src/components/utils/*"
+      ],
+      "$xuder": [
+        "src/xuder"
+      ],
+      "$xuder/*": [
+        "src/xuder/*"
+      ],
+    },
   },
-  "baseUrl": "./src/components",
-  "paths": {
-    "views": ["./views"],
-    "xuder": ["./xuder"]
-  }
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
 }
