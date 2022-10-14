@@ -12,9 +12,10 @@ module.exports = function (api) {
         'module-resolver',
         {
           alias: {
+            'src': './src',
             '$components': './src/components',
-            '$pages': './src/components/pages',
-            '$utils': './src/components/utils',
+            '$pages': './src/pages',
+            '$utils': './src/utils',
             '$xuder': './src/xuder',
           },
         },

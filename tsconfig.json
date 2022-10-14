@@ -17,16 +17,16 @@
         "src/components/*"
       ],
       "$pages": [
-        "src/components/pages"
+        "src/pages"
       ],
       "$pages/*": [
-        "src/components/pages/*"
+        "src/pages/*"
       ],
       "$utils": [
-        "src/components/utils"
+        "src/utils"
       ],
       "$utils/*": [
-        "src/components/utils/*"
+        "src/utils/*"
       ],
       "$xuder": [
         "src/xuder"
