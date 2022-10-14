@@ -21,9 +21,11 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
     actions.test(111)
   }, [])
 
-  return <View ref={ref} className={styles['index']}>
-    <Text>------{a}</Text>
-  </View>
+  return (
+    <View ref={ref} style={styles.container}>
+      <Text className={styles.index}>------{a}</Text>
+    </View>
+  )
 }
 
 export default connect<StateProps, DispatchProps, OwnProps>(
