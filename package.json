@@ -1,7 +1,11 @@
 {
-  "name": "timetracker",
+  "name": "time-tracker",
   "version": "1.0.0",
+  "private": true,
+  "description": "a self-used time tracker",
+  "author": "zhuge",
   "main": "node_modules/expo/AppEntry.js",
+  "license": "Apache",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,23 +13,49 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "expo": "~46.0.13",
     "expo-status-bar": "~1.4.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "observable-hooks": "^4.2.1",
+    "ramda": "^0.28.0",
     "react": "18.0.0",
-    "react-native": "0.69.6"
+    "react-native": "0.69.6",
+    "react-redux": "^8.0.4",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.2.0",
+    "redux-actions": "^2.6.5",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^2.0.0",
+    "redux-thunk": "^2.4.1",
+    "rxjs": "^7.5.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@expo/webpack-config": "^0.17.2",
+    "@types/lodash": "^4.14.186",
+    "@types/ramda": "^0.28.15",
     "@types/react": "~18.0.0",
-    "@types/react-native": "~0.69.1",
+    "@types/react-native": "kristerkari/react-native-types-for-css-modules#0.69.6",
+    "@types/react-router-redux": "^5.0.21",
+    "@types/redux-actions": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
     "babel-plugin-react-native-classname-to-style": "^1.2.2",
     "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
     "react-devtools": "^4.26.0",
     "react-native-sass-transformer": "^2.0.0",
     "sass": "^1.55.0",
+    "stylelint": "^14.13.0",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
     "typescript": "^4.8.4"
-  },
-  "private": true
+  }
 }
