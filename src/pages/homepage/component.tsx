@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
+import { View } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { View, Text } from 'react-native'
+import { Layout, Text, Button, Icon } from '@ui-kitten/components'
 import { GlobalState } from 'src/xuder/reducer'
-import cx from 'classnames'
+// import cx from 'classnames'
 import { DispatchProps, StateProps } from './types'
 import { actions } from './modules'
 import styles from './index.module.scss'
@@ -14,6 +15,14 @@ export interface OwnProps extends CommonProps { }
 
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 
+const FacebookIcon = (props) => (
+  <Icon name="facebook" {...props} />
+)
+
+export const LoginButton = () => (
+  <Button accessoryLeft={FacebookIcon}>Login with Facebook</Button>
+)
+
 const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
   const { actions, a } = props
 
@@ -21,10 +30,17 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
     actions.test(111)
   }, [])
 
+  // return (
+  //   <View ref={ref} style={styles.container}>
+  //     <Text className={styles.index}>------{a}</Text>
+  //   </View>
+  // )
+
   return (
-    <View ref={ref} style={styles.container}>
-      <Text className={styles.index}>------{a}</Text>
-    </View>
+    <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <LoginButton />
+      <Text category="h1">HOME</Text>
+    </Layout>
   )
 }
 
