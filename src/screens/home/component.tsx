@@ -15,7 +15,7 @@ export interface OwnProps extends CommonProps { }
 
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 
-export const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
   const navigateDetails = () => {
     navigation.navigate('Details')
   }
@@ -30,6 +30,8 @@ export const HomeScreen = ({ navigation }) => {
     </SafeAreaView>
   )
 }
+
+export default HomeScreen
 
 const FacebookIcon = (props) => <Icon name="facebook" {...props} />
 
@@ -60,13 +62,13 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
   // return <HomeScreen {...props} />
 }
 
-export default connect<StateProps, DispatchProps, OwnProps>(
-  (state: GlobalState): StateProps => {
-    return state.ui.homeScreen
-  },
-  (dispatch) => {
-    return {
-      actions: bindActionCreators(actions, dispatch),
-    }
-  },
-)(React.forwardRef(Index))
+// export default connect<StateProps, DispatchProps, OwnProps>(
+//   (state: GlobalState): StateProps => {
+//     return state.ui.homeScreen
+//   },
+//   (dispatch) => {
+//     return {
+//       actions: bindActionCreators(actions, dispatch),
+//     }
+//   },
+// )(React.forwardRef(Index))
