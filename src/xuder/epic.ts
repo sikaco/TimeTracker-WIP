@@ -1,4 +1,4 @@
 import { combineEpics } from 'redux-observable'
-import { epic as homepageEpic } from '$pages/homepage/modules'
+import { epic as homeScreenEpic } from '$screens/homeScreen/modules'
 
-export const rootEpic = combineEpics(homepageEpic)
+export const rootEpic = combineEpics(homeScreenEpic)

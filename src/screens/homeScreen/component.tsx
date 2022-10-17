@@ -16,8 +16,6 @@ export interface OwnProps extends CommonProps { }
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 
 export const HomeScreen = ({ navigation }) => {
-  console.log('123123', navigation)
-
   const navigateDetails = () => {
     navigation.navigate('Details')
   }
@@ -64,7 +62,7 @@ const Index: React.ForwardRefRenderFunction<{}, Props> = (props, ref) => {
 
 export default connect<StateProps, DispatchProps, OwnProps>(
   (state: GlobalState): StateProps => {
-    return state.ui.homepage
+    return state.ui.homeScreen
   },
   (dispatch) => {
     return {
