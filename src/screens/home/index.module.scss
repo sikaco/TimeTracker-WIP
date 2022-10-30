@@ -1,7 +1,13 @@
+.screen-content {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
 .index {
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+  // flex-direction: column;
+  // width: 100%;
+  // height: 100%;
   color: red;
   // text-align: center;
 }
