@@ -10,7 +10,7 @@ import './app.scss'
 
 const store = configureStore()
 
-export default () => (
+const App = () => (
   <Provider store={store}>
     <IconRegistry icons={EvaIconsPack} />
     <ApplicationProvider {...eva} theme={eva.light}>
@@ -18,3 +18,5 @@ export default () => (
     </ApplicationProvider>
   </Provider>
 )
+
+export default App

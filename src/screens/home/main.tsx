@@ -11,7 +11,7 @@ import styles from './index.module.scss'
 
 export interface CommonProps { dispatch: any }
 
-export interface OwnProps extends CommonProps { }
+export type OwnProps = CommonProps
 
 export type Props = StateProps & DispatchProps & Readonly<OwnProps>
 

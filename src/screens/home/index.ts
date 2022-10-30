@@ -1,6 +1,6 @@
-import component from './component'
+import component from './main'
 
-export * from './component'
+export * from './main'
 export * from './types'
 export * from './modules'
 
