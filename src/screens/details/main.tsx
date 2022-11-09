@@ -1,13 +1,13 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import { CompositeScreenProps } from '@react-navigation/native'
 import { Divider, Icon, Layout, Text, TopNavigation, TopNavigationAction } from '@ui-kitten/components'
+import { NavigationProps } from 'src/types'
 
 const BackIcon = (props) => (
   <Icon {...props} name="arrow-back" />
 )
 
-const DetailsScreen = ({ navigation }: CompositeScreenProps<any, any>) => {
+const DetailsScreen = ({ navigation }: NavigationProps) => {
   const navigateBack = () => {
     navigation.goBack()
   }
@@ -18,7 +18,7 @@ const DetailsScreen = ({ navigation }: CompositeScreenProps<any, any>) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <TopNavigation title="MyApp" alignment="center" accessoryLeft={BackAction} />
+      {/* <TopNavigation title="MyApp" alignment="center" accessoryLeft={BackAction} /> */}
       <Divider />
       <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text category="h1">DETAILS</Text>
