@@ -2,10 +2,13 @@ import { map, Observable, throttleTime, timeout } from 'rxjs'
 import { handleActions, createAction, Action } from 'redux-actions'
 import { combineEpics, ofType } from 'redux-observable'
 import { Store } from 'redux'
+
 import { EpicInput, GlobalState, noOpAction } from '$xuder'
+
 // import { throwError } from 'lib/throw-error'
 // import { hasPayload } from 'lib/truthiness'
-import { namespaceFnGenerator } from '$utils'
+import { namespaceFnGenerator } from '$common/utils'
+
 import { State } from './types'
 // import * as req from './requests'
 // import * as utils from './utils'

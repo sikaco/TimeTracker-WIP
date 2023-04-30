@@ -13,17 +13,14 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "$components": [
-        "src/components/"
+      "$assets/*": [
+        "src/assets/*"
       ],
       "$components/*": [
-        "src/components/*"
-      ],
-      "$screens": [
-        "src/screens"
+          "src/components/*"
       ],
       "$screens/*": [
-        "src/screens/*"
+          "src/pages/*"
       ],
       "$common": [
         "src/common"
@@ -31,17 +28,14 @@
       "$common/*": [
         "src/common/*"
       ],
-      "$utils": [
-        "src/common/utils"
-      ],
-      "$utils/*": [
-        "src/common/utils/*"
-      ],
       "$xuder": [
         "src/xuder"
       ],
       "$xuder/*": [
-        "src/xuder/*"
+          "src/xuder/*"
+      ],
+      "$/*": [
+          "src/*"
       ],
     },
   },

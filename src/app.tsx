@@ -4,9 +4,10 @@ import { Provider } from 'react-redux'
 import * as eva from '@eva-design/eva'
 import { ApplicationProvider, IconRegistry } from '@ui-kitten/components'
 import { EvaIconsPack } from '@ui-kitten/eva-icons'
+
 import configureStore from '$xuder/store'
+
 import { AppNavigator } from './navigation'
-import './app.scss'
 
 const store = configureStore()
 

@@ -3,16 +3,20 @@ import { SafeAreaView } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Layout, Text, Button, Divider, TopNavigation } from '@ui-kitten/components'
+import { NavigationProps } from 'src/types'
+
+import { CompProps } from '$common/types'
 // import cx from 'classnames'
 import { GlobalState } from '$xuder/reducer'
-import { NavigationProps } from 'src/types'
+
 import { actions } from './modules'
-import styles from './index.module.scss'
-import { CompProps } from '$common/types'
+import sty from './main.styles'
 
-export interface CommonProps { dispatch: any }
+export interface CommonProps {
+  dispatch: any
+}
 
-export type OwnProps = NavigationProps
+export type OwnProps = NavigationProps & {}
 
 type Props = CompProps<OwnProps, typeof connector>
 
@@ -26,7 +30,7 @@ const HomeScreen: FunctionComponent<Props> = props => {
   const { actions, a, navigation } = props
 
   useEffect(() => {
-    actions.test(113)
+    actions.test(115)
   }, [])
 
   const navigateDetails = () => {
@@ -34,12 +38,12 @@ const HomeScreen: FunctionComponent<Props> = props => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, ...styles.container }}>
+    <SafeAreaView style={{ flex: 1 }}>
       {/* <TopNavigation title="MyApp" alignment="center" /> */}
       <Divider />
-      <Layout className={styles['screen-content']}>
+      <Layout style={sty.screenContent}>
         <Button onPress={navigateDetails}>OPEN DETAILS</Button>
-        <Text className={styles.index}>------{a}</Text>
+        <Text style={sty.index}>------{a}</Text>
       </Layout>
     </SafeAreaView>
   )
