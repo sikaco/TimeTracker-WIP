@@ -25,11 +25,17 @@
       "$screens/*": [
         "src/screens/*"
       ],
+      "$common": [
+        "src/common"
+      ],
+      "$common/*": [
+        "src/common/*"
+      ],
       "$utils": [
-        "src/utils"
+        "src/common/utils"
       ],
       "$utils/*": [
-        "src/utils/*"
+        "src/common/utils/*"
       ],
       "$xuder": [
         "src/xuder"

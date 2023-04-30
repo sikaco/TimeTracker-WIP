@@ -13,7 +13,7 @@ import { State } from './types'
 const { namespace, success, failure } = namespaceFnGenerator('homeScreen')
 
 const defaultState: State = {
-  a: 1,
+  a: 1
 }
 
 const getState = (store: Store<GlobalState>) => {
@@ -24,7 +24,7 @@ const getState = (store: Store<GlobalState>) => {
 const handleAssignData = (state: State, action: Action<any>) => {
   return {
     ...state,
-    ...action.payload,
+    ...action.payload
   }
 }
 
@@ -33,7 +33,7 @@ export const actions = {
   getProjectTagsSuccess: createAction<any[]>(success('GET_PROJECT_TAGS')),
   getProjectTagsFailure: createAction<Error>(failure('GET_PROJECT_TAGS')),
   test: createAction<number>(namespace('TEST')),
-  testSuccess: createAction<any>(success('TEST')),
+  testSuccess: createAction<any>(success('TEST'))
 }
 
 export const reducer = handleActions<State, any>(
@@ -53,11 +53,11 @@ export const reducer = handleActions<State, any>(
 
       return {
         ...state,
-        a: payload + 1,
+        a: payload + 1
       }
-    },
+    }
   },
-  defaultState,
+  defaultState
 )
 
 export const epic = combineEpics<any>(
@@ -83,14 +83,15 @@ export const epic = combineEpics<any>(
   //   })
   // },
 
-  (action$: EpicInput<number>) => action$.pipe(
-    ofType(actions.test),
-    map((action: Action<number>) => {
-      console.log('payload1', action)
+  (action$: EpicInput<number>) =>
+    action$.pipe(
+      ofType(actions.test),
+      map((action: Action<number>) => {
+        console.log('payload1', action)
 
-      return actions.testSuccess(action.payload)
-    }),
-  ),
+        return actions.testSuccess(action.payload)
+      })
+    )
   // {
   //     console.log('action$action$', action$)
   //     return action$.ofType(`${actions.test}`).map(actions.testSuccess)
