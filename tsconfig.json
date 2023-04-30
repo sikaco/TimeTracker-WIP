@@ -20,7 +20,7 @@
           "src/components/*"
       ],
       "$screens/*": [
-          "src/pages/*"
+          "src/screens/*"
       ],
       "$common": [
         "src/common"

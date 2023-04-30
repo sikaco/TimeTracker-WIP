@@ -3,20 +3,13 @@ import { SafeAreaView } from 'react-native'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Layout, Text, Button, Divider, TopNavigation } from '@ui-kitten/components'
-import { NavigationProps } from 'src/types'
-
 import { CompProps } from '$common/types'
-// import cx from 'classnames'
 import { GlobalState } from '$xuder/reducer'
 
 import { actions } from './modules'
 import sty from './main.styles'
 
-export interface CommonProps {
-  dispatch: any
-}
-
-export type OwnProps = NavigationProps & {}
+export type OwnProps = {}
 
 type Props = CompProps<OwnProps, typeof connector>
 
